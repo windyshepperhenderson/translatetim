@@ -49,9 +49,9 @@ function App() {
             <option value="es">Spanish</option>
             <option value="tr">Turkish</option>
           </select>
+          <button>Submit</button>
           <div className="output">{translation}</div>
         </div>
-        <button>Submit</button>
       </form>
       <img src={image} />
     </>

@@ -1,0 +1,24 @@
+.img {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.output {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 30px;
+  color: red;
+  font-weight: 100px;
+}
