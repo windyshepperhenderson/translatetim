@@ -6,6 +6,7 @@ function App() {
   //store our 'from' and 'to' languages in state
   const [from, setFrom] = useState("ar");
   const [to, setTo] = useState("ar");
+  const [image, setImage] = useState("");
 
   //store the word we want to translate in state
   //translation returns an object (of data) so thats what we are using in brackets
@@ -17,9 +18,10 @@ function App() {
   //onsubmit function that calls our API
   async function handleTranslate(event) {
     event.preventDefault();
-    const API = `http://localhost:8080/translate?word=${word}&from=${from}&to=${to}`;
+    const API = `https://translatetim.onrender.com/translate?word=${word}&from=${from}&to=${to}`;
     const res = await axios.get(API);
     setTranslation(res.data.translation);
+    setImage(res.data.image);
   }
 
   return (
@@ -51,6 +53,7 @@ function App() {
         </div>
         <button>Submit</button>
       </form>
+      <img src={image} />
     </>
   );
 }
